@@ -1,0 +1,401 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  cursor:cell;
+  /* Experimental Cursor "_" */
+}
+
+body{
+  background:#050505;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow-x:hidden;
+}
+
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding:25px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position: fixed;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.2);
+  border-bottom:1px solid #151515;
+}
+.logo{
+  font-size:24px;
+  font-weight:800;
+}
+nav{
+  display:flex;
+  gap:40px;
+}
+nav a{
+  color:#aaa;
+  text-decoration:none;
+  transition:0.3s ease;
+}
+nav a:hover{
+  color:white;
+}
+
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 8%;
+  background:
+  radial-gradient(circle at top, #222 0%, #050505 70%);
+}
+.hero-content h1{
+  font-size:110px;
+  line-height:1;
+  font-weight:900;
+}
+.hero-content p{
+  margin-top:30px;
+  color:#aaa;
+  font-size:22px;
+}
+.hero-buttons{
+  margin-top:45px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.primary-btn{
+  background: transparent;
+  color: white;
+  border:1px solid #333;
+  padding:18px 35px;
+  border-radius:16px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+.primary-btn:hover{
+  /* to disable upward animation */
+  /* transform:translateY(-3px); */
+  border-color:#777;
+  /* Experimental Animation */
+  color: black;
+  background-color: white;
+}
+
+.secondary-btn{
+  background:transparent;
+  color:white;
+  border:1px solid #333;
+  padding:18px 35px;
+  border-radius:16px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+.secondary-btn:hover{
+  /* to disable upward animation */
+  /* transform:translateY(-3px); */
+  border-color:#777;
+  /* Experimental Animation */
+  color: black;
+  background-color: white;
+}
+
+.third-btn{
+  background:white;
+  color:black;
+  border:none;
+  padding:12px 25px;
+  border-radius:18px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+.third-btn:hover{
+  transform:translateY(-3px);
+}
+
+
+/* PROJECTS */
+.projects{
+  padding:120px 8%;
+}
+.projects h2{
+  font-size:60px;
+  margin-bottom:60px;
+}
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:35px;
+}
+
+/* PROJECT CARD */
+.project-card{
+  background:#101010;
+  border:1px solid #1c1c1c;
+  border-radius:28px;
+  overflow:hidden;
+  position:relative;
+
+  transition:
+  transform 0.4s ease,
+  border-color 0.4s ease,
+  box-shadow 0.4s ease;
+}
+
+/* CARD HOVER */
+.project-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  border-color:#555;
+  box-shadow:0 20px 40px rgba(255,255,255,0.08);
+}
+
+/* PROJECT IMAGE */
+.project-image{
+  width:100%;
+  height:220px;
+  overflow:hidden;
+  border-bottom:1px solid #1a1a1a;
+}
+
+/* PERFECT IMAGE FIT */
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit: fill;
+  display:block;
+  transition:transform 0.4s ease;
+}
+
+/* IMAGE ANIMATION */
+.project-card:hover .project-image img{
+  transform:scale(1.08);
+}
+
+/* PROJECT CONTENT */
+.project-content{
+  padding:35px;
+}
+.project-content h3{
+  font-size:32px;
+  margin-bottom:15px;
+}
+.project-content p{
+  color:#aaa;
+  margin-bottom:30px;
+  line-height:1.7;
+}
+.project-content a{
+  text-decoration:none;
+}
+
+.project-content button{
+  background:white;
+  color:black;
+  border:none;
+  padding:14px 28px;
+  border-radius:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+.project-content button:hover{
+  transform:translateY(-3px);
+  border-color:#777;
+  /* Experimental Animation
+  color: white;
+  background-color: #555;
+  color: black;
+  background-color: white; */
+}
+
+
+/* SKILLS */
+.skills{
+  padding:120px 8%;
+}
+.skills h2{
+  font-size:60px;
+  margin-bottom:50px;
+}
+.skills-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.skills-container span{
+  padding:18px 30px;
+  background:#111;
+  border:1px solid #222;
+  border-radius:16px;
+  transition:0.3s ease;
+}
+.skills-container span:hover{
+  transform:translateY(-5px);
+  border-color:#555;
+}
+
+
+/* BLOGS */
+.blogs{
+  padding:120px 8%;
+}
+.blogs h2{
+  font-size:60px;
+  margin-bottom:50px;
+}
+.blogs p{
+  color:#aaa;
+  font-size:18px;
+}
+
+
+/* ABOUT */
+.about{
+  padding:120px 8%;
+  line-height:1.8;
+  color:#ccc;
+}
+.about h2{
+  font-size:60px;
+  margin-bottom:30px;
+  color:white;
+}
+
+
+/* FOOTER */
+footer{
+  padding:120px 8%;
+  text-align:center;
+  border-top:1px solid #151515;
+}
+footer h2{
+  font-size:60px;
+  margin-bottom:25px;
+}
+footer p{
+  color:#888;
+  margin-bottom:20px;
+}
+
+
+/* SOCIAL ICONS */
+.social-icons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  margin-top:35px;
+  flex-wrap:wrap;
+}
+
+
+/* ICON STYLE */
+.social-icons a{
+  text-decoration:none;
+  color:white;
+
+  width:52px;
+  height:52px;
+
+  background:#111;
+  border:1px solid #222;
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:20px;
+
+  transition:
+  transform 0.3s ease,
+  background 0.3s ease,
+  color 0.3s ease,
+  border-color 0.3s ease;
+}
+
+/* ICON HOVER */
+.social-icons a:hover{
+  transform:translateY(-6px) scale(1.1);
+  background:white;
+  color:black;
+  border-color:white;
+}
+
+/* FOOTER TEXT */
+.footer-brand{
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+}
+.footer-bottom{
+  margin-top:60px;
+}
+.footer-bottom p{
+  color:#555;
+  margin:5px 0;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  nav{
+    display:none;
+  }
+
+  .hero-content h1{
+    font-size:65px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .projects h2,
+  .skills h2,
+  .blogs h2,
+  .about h2,
+  footer h2{
+    font-size:42px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-content h3{
+    font-size:26px;
+  }
+
+  .project-image{
+    height:200px;
+  }
+}
