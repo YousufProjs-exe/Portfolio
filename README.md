@@ -1,1 +1,1 @@
-### Visit <a  href="[https://khajayousufportfolio.netlify.app](https://yousufprojs-exe.github.io/Portfolio/)"> Portfolio </a>
+### Visit <a  href="(https://yousufprojs-exe.github.io/Portfolio/)"> Portfolio </a>
